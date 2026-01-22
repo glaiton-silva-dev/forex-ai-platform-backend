@@ -1,0 +1,22 @@
+services:
+  # Configuração do Backend (Node.js)
+  - type: web
+    name: forex-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node src/app.js
+    envVars:
+      - key: NODE_VERSION
+        value: 18.0.0
+      - key: DATABASE_URL
+        fromDatabase:
+          name: forex-db
+          property: connectionString
+
+databases:
+  # Configuração do PostgreSQL
+  - name: forex-db
+    plan: free
+    databaseName: forex_ai_db
+    user: admin
