@@ -1,0 +1,6 @@
+{
+  "lastTrainedAt": "2026-01-21T19:08:08.279Z",
+  "totalEpochs": 50,
+  "bestAccuracy": 0.6896551847457886,
+  "trainingSamples": 435
+}
